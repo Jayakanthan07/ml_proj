@@ -1,5 +1,5 @@
-//const URL = 'https://tamilcharpred.herokuapp.com/'
-const URL = 'https://cryptic-beach-64926.herokuapp.com/'
+const URL = 'https://tamilcharpred.herokuapp.com/'
+//const URL = 'https://cryptic-beach-64926.herokuapp.com/'
 //const URL = 'http://localhost:5000/'
 function setup() {
   var canvas = createCanvas(356, 356);
