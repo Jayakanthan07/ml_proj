@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+   
+
+</head>
+
+<body>
+    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div class="row justify-content-center">
+            <h4>Handwritten Tamil Character Recognition Using ConvNet</h4>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-3">
+                    <p id = "desc"><strong>Here we trained the CNN on the HPL isolated tamil Dataset by HP using FastAI, and it can classify upto 156 characters. </strong>
+                    <p><strong>A model trained on resnet50 and has the accuracy of 96%.</strong></p>
+            
+                <p><strong>Make use of the canvas to view the results.</strong></p>
+            
+            </div>
+            <div class="col-md-9">
+                <div id="drawingBoard">
+                    <!-- Our sketch goes here! -->
+                </div>
+                <div class="btns">
+                    <button type="button" class="btn btn-success" id="predict">Predict</button>
+                    <button type="button" class="btn btn-danger" id="reset">Reset</button>
+                </div>
+                <p id="predH"><strong>the letter you have drawn is: <span id="predS"></span></p>
+                <!--    <img src="nn.png" class="img-thumbnail" alt="Cinque Terre">-->
+                <p>Wanna Learn More About Deep Learning?...here u go!!</p>
+                <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://course.fast.ai'">FastAI</button>
+                <a href="https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2">   
+                <button type="button" class="btn btn-primary">CNN</button>
+                </a>
+                <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://towardsdatascience.com/applied-deep-learning-part-1-artificial-neural-networks-d7834f67a4f6'">ANN</button>
+                <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://docs.fast.ai/vision.html#Computer-vision'">Computer Vision</button>
+                       
+                      
+            </div>
+            
+        </div>
+        
+    </div>
+
+
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <!-- p5.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js" crossorigin="anonymous"></script>
+    <script src="sketch.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>

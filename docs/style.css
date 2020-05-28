@@ -1,0 +1,36 @@
+#drawingBoard {
+    /* border: 2px solid; */
+    padding-top: 100px;
+    
+}
+
+#desc {
+    padding-top: 150px;
+    color:rgb(224, 224, 224);
+}
+body {
+    background-color:black;
+    height: 100%;
+    color: rgb(255, 255, 255);
+}
+
+a,
+a:hover
+{
+    text-decoration: underline;
+    color: white;
+}
+.btns {
+    padding: 30px 30px;
+}
+
+#predH {
+    display: none;
+}
+
+
+body {
+    background-image: url("joypa.jpg");
+    background-repeat: no-repeat-center;
+    
+   }
