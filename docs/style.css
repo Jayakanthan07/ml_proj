@@ -1,36 +1,227 @@
-#drawingBoard {
-    /* border: 2px solid; */
-    padding-top: 100px;
-    
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.outer-container{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+    background-color: #1a237e !important;
+    border: none;
+}
+
+.nav-bar{
+    position: absolute;
+    top: 2.5vh;
+    width: 50%;
+}
+
+.nav-bar ul{
+    margin-right: 2.5vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-bar div{
+    flex:1;
+    margin-top: 1vh;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-bar h3{
+    color: #1a237e;
+}
+
+p{
+    margin-left:2.5vh;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.nav-bar h6{
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+li{
+    text-decoration: none;
+}
+
+
+
+#drawingBoard :nth-child(2) {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset{
+    border-radius:0px ;
+}
+
+.btns button{
+   border-radius: 0px;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.2), 0 10px 10px rgba(0,0,0,0.22);
+   width: 450px;
+   height: 50px;
+}
+
+
+ 
+
+#drawingBoard div {
+    width: 450px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 50px;
+}
+
+#drawingBoard{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.inner-left{
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.inner-left > p.topic-content {
+    width: 100%;
+    text-align: center;
+    padding: 0 15%;
 }
 
 #desc {
     padding-top: 150px;
     color:rgb(224, 224, 224);
 }
-body {
-    background-color:black;
-    height: 100%;
-    color: rgb(255, 255, 255);
-}
 
-a,
-a:hover
-{
-    text-decoration: underline;
-    color: white;
-}
 .btns {
     padding: 30px 30px;
+}
+
+.inner-right {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    padding: 0 30px;
+}
+
+.inner-right > * {
+    height: 100%;
 }
 
 #predH {
     display: none;
 }
 
+#predH > div.result {
+    display: flex;
+    flex-direction: column;
+}
 
-body {
-    background-image: url("joypa.jpg");
-    background-repeat: no-repeat-center;
-    
-   }
+#predH div.result > * {
+    font-size: 24px;
+    width: 100%;
+}
+
+#predH > div.result > p.type-write  {
+    padding-top: 0%;
+    padding-bottom :0px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3s steps(30, end);
+}
+
+#predS {
+    font-size: 80px !important;
+}
+
+
+.inner-right > div.principle-of-working{
+    padding-top: 4%;
+}
+
+.inner-right > div.principle-of-working > h3 {
+    text-align: center;
+}
+
+.inner-right > div.principle-of-working > p{
+    font-size: 16px;
+}
+
+.inner-right > div.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inner-right > div.footer > ul{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    padding-bottom: 5%;
+}
+
+.inner-right > div.footer > ul > li{
+    align-self: flex-end;
+    width: 100%;
+    text-align: center;
+}
+  
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@media screen and (max-width:1150px){
+     .inner-right{
+        display: none;
+     }
+
+     .outer-container{
+        text-align: center;
+        grid-template-columns: 100%;
+     }
+
+     .nav-bar{
+        width: 100%;
+     }
+
+     .inner-left{
+        justify-content: center;
+        align-items: center;
+     }
+
+     .fab {
+        color: red !important;
+    }
+      
+
+}

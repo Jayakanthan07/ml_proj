@@ -11,63 +11,107 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 
-
-   
 
 </head>
 
 <body>
-    <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <div class="row justify-content-center">
-            <h4>Handwritten Tamil Character Recognition Using ConvNet</h4>
-        </div>
+    <div class="outer-container" >
 
-        <div class="row text-center">
-            <div class="col-md-3">
-                    <p id = "desc"><strong>Here we trained the CNN on the HPL isolated tamil Dataset by HP using FastAI, and it can classify upto 156 characters. </strong>
-                    <p><strong>A model trained on resnet50 and has the accuracy of 96%.</strong></p>
-            
-                <p><strong>Make use of the canvas to view the results.</strong></p>
-            
-            </div>
-            <div class="col-md-9">
-                <div id="drawingBoard">
+            <div class="inner-left">
+                <div class="nav-bar">
+                    <ul>
+                        <h3>Handwritten Tamil Character Recognition</h3>
+                    </ul>
+                </div>
+                <p class="topic-content">
+                    Here we trained the CNN on variety of Tamil characters, and it can classify upto 156 characters in the language
+                </p>
+                <div id="drawingBoard">                  
                     <!-- Our sketch goes here! -->
+                    <div>
+                        <button type="button" class="btn btn-danger" id="reset">Reset</button>
+                    </div>
                 </div>
                 <div class="btns">
-                    <button type="button" class="btn btn-success" id="predict">Predict</button>
-                    <button type="button" class="btn btn-danger" id="reset">Reset</button>
+                    <button type="button" class="btn btn-success" id="predict" data-toggle="modal" data-target="#exampleModal">Predict</button>
                 </div>
-                <p id="predH"><strong>the letter you have drawn is: <span id="predS"></span></p>
-                <!--    <img src="nn.png" class="img-thumbnail" alt="Cinque Terre">-->
-                <p>Wanna Learn More About Deep Learning?...here u go!!</p>
-                <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://course.fast.ai'">FastAI</button>
-                <a href="https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2">   
-                <button type="button" class="btn btn-primary">CNN</button>
-                </a>
-                <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://towardsdatascience.com/applied-deep-learning-part-1-artificial-neural-networks-d7834f67a4f6'">ANN</button>
-                <button type="button" class="btn btn-primary" onclick="window.location.href = 'https://docs.fast.ai/vision.html#Computer-vision'">Computer Vision</button>
-                       
-                      
             </div>
+
+            <div class="inner-right">
+                <div class="principle-of-working">
+                    <h3>Working</h3>
+                    <p>It works based on the input i.e. the character to be recognized is drawn on the canvas and the related output is displayed below. You may even save the input image drawn for later purposes for using the same image as an input to the image dataset. The application is deployed with heroku. You can even reach us through the below links or incase of any contribution u can click the patreon and show your love, Thanks.  
+                    </p>
+                </div>
+               <div class ="card bg-dark text-white">
+                <div class="card-header">
+                    <strong>Output goes here :</strong>
+                </div>
+               
+                   <div id="predH" > 
+                    <div class="result">
+                        <p>The letter you have drawn is:</p>
+                        <p id="predS"></p>
+                    </div>
+               
+            </div>
+               </div>
             
-        </div>
-        
+               &nbsp;
+                    
+                <div class="footer">
+                    <p><strong>Contact</strong> us </p>
+                    <ul class="author-social-links">
+                        <li><a href="https://www.github.com/Jayakanthan07"><i class="fab fa-github fa-3x " style='font-size:48px;color:black'></i></a></li>
+                        <li><a href="https://www.instagram.com/j_kanth_07_/"><i class="fab fa-instagram fa-3x" style='font-size:48px;color:black'></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/jayakanthan-r-ab056816a/"><i class="fab fa-linkedin fa-3x" style='font-size:48px;color:black'></i></a></li>
+                        <li><a href="http://www.patreon.com/crimsonfern"><i class="fab fa-patreon fa-3x" style='font-size:48px;color:black'></i></a></li>
+                    </ul>
+
+                </div>
+                
+                                        
+            </div>
+
     </div>
+                          
+<!-- Modal 
+  
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div id="predH">
+                <div class="result">
+                    <p>The letter you have drawn is:</p>
+                    <p id="predS"></p>
+                </div>
+            </div>
 
 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
     <!-- bootstrap -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    
 
     <!-- p5.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js" crossorigin="anonymous"></script>
@@ -76,7 +120,5 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-
 </body>
-
 </html>
