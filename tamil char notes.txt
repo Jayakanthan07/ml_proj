@@ -1,0 +1,12 @@
+optimser adam
+loss function cross entropy
+removing final customlayer and using our 156 o/p
+called as classifier layer
+unfreezing all layer and train again to get more accuracy 
+
+
+
+alg:
+ANN algorithm
+CNN
+ 
